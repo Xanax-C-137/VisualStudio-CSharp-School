@@ -1,8 +1,0 @@
-{
-  "profiles": {
-    "SiiSharp": {
-      "commandName": "Project",
-      "commandLineArgs": "10 \"Hello World\""
-    }
-  }
-}

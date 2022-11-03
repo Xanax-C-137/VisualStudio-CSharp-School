@@ -1,0 +1,5 @@
+﻿Bedeutung der Informatik
+Die Informatik hat in praktisch allen Bereichen des modernen Lebens Einzug gehalten.
+Offensichtlich wird dies durch den enormen Einfluss des Internets verstärkt. 
+Die vielfältige, insbesondere weltweite, Vernetzung revolutionierte die Telekommunikation und die Informationsverarbeitung in den Unternehmen, die Logistik, die Medien aber auch praktisch alle privaten Haushalte. 
+Weniger offensichtlich, aber allgegenwärtig ist die Informatik in Haushaltsgeräten wie Videorekordern oder Spülmaschinen, in denen eingebettete Systeme die mehr oder weniger intelligente Steuerung übernehmen.

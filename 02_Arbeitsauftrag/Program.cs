@@ -1,8 +1,4 @@
-﻿/*
- * Copyright 2022 Moritz Füssel
- */
-
-namespace Arbeitsauftrag02
+﻿namespace Arbeitsauftrag02
 {
     internal class Program
     {
@@ -32,16 +28,16 @@ namespace Arbeitsauftrag02
             }
         }
 
-        static Int64 ReadInt(string prefix, int left, ref int top)
+        static int ReadInt(string prefix, int left, ref int top)
         {
-            Int64 result = 0;
-            string? txt = null;
+            int result;
+            string? txt;
             do
             {
                 Console.SetCursorPosition(left, top);
                 Console.Write(prefix);
                 txt = Console.ReadLine();
-            } while (!Int64.TryParse(txt, out result));
+            } while (!int.TryParse(txt, out result));
             top++;
             return result;
         }
@@ -52,20 +48,20 @@ namespace Arbeitsauftrag02
             {
                 Console.SetCursorPosition(left, top);
                 Console.Write("*");
-            } catch(Exception e)
+            } catch(Exception)
             { return; }
             
         }
 
         static void DrawVLine(int left, int top)
         {
-            Int64 tmpHeight = ReadInt("Höhe: ", left, ref top);
+            int tmpHeight = ReadInt("Höhe: ", left, ref top);
             Console.Clear();
             DrawVLine(left, top, tmpHeight);
             Thread.Sleep(2000);
         }
 
-        static void DrawVLine(int left, int top, Int64 height)
+        static void DrawVLine(int left, int top, int height)
         {
             for (int i = 0; i < height; i++)
             {
@@ -75,13 +71,13 @@ namespace Arbeitsauftrag02
 
         static void DrawHLine(int left, int top)
         {
-            Int64 tmpWidth = ReadInt("Breite: ", left, ref top);
+            int tmpWidth = ReadInt("Breite: ", left, ref top);
             Console.Clear();
             DrawHLine(left, top, tmpWidth);
             Thread.Sleep(2000);
         }
 
-        static void DrawHLine(int left, int top, Int64 width)
+        static void DrawHLine(int left, int top, int width)
         {
             for (int i = 0; i < width; i++)
             {
@@ -91,8 +87,8 @@ namespace Arbeitsauftrag02
 
         static void DrawRectangle(int left, int top)
         {
-            Int64 tmpHeight = ReadInt("Höhe: ", left, ref top);
-            Int64 tmpWidth = ReadInt("Breite: ", left, ref top);
+            int tmpHeight = ReadInt("Höhe: ", left, ref top);
+            int tmpWidth = ReadInt("Breite: ", left, ref top);
             Console.Clear();
             DrawRectangle(left, top, (int)tmpWidth, (int)tmpHeight);
             Thread.Sleep(2000);
@@ -108,9 +104,9 @@ namespace Arbeitsauftrag02
 
         static void DrawGrid(int top, int left)
         {
-            Int64 tmpCellSize = ReadInt("Zellengröße: ", left, ref top);
-            Int64 tmpRows = ReadInt("Zeilen: ", left, ref top);
-            Int64 tmpCols = ReadInt("Spalten: ", left, ref top);
+            int tmpCellSize = ReadInt("Zellengröße: ", left, ref top);
+            int tmpRows = ReadInt("Zeilen: ", left, ref top);
+            int tmpCols = ReadInt("Spalten: ", left, ref top);
             Console.Clear();
             DrawGrid(left, top, (int)tmpCellSize, (int)tmpRows, (int)tmpCols);
             Thread.Sleep(2000);
@@ -127,9 +123,9 @@ namespace Arbeitsauftrag02
             }
         }
 
-        static void Main(string[] args)
+        static void Main()
         {
-            char? c = null;
+            char? c;
             int top = 10,
                 origTop = top;
             int left = 10;
